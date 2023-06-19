@@ -1,0 +1,90 @@
+body{
+    background-color: #eeeeee;
+}
+
+.footer-background{
+    background-color: rgba(203, 203, 203, 0.919);
+}
+
+@media(max-width:991px){
+    #heading{
+        padding-left: 50px;
+    }
+    #prc{
+        margin-left: 70px;
+        padding-left: 110px;
+    }
+    #quintidade{
+        padding-left: 48px;
+    }
+    #produto{
+        padding-left: 40px;
+    }
+    #total{
+        padding-left: 54px;
+    }
+}
+@media(max-width:767px){
+    .mobile{
+        font-size: 10px;
+    }
+    h5{
+        font-size: 14px;
+    }
+    h6{
+        font-size: 9px;
+    }
+    #mobile-font{
+        font-size: 11px;
+    }
+    #prc{
+        font-weight: 700;
+        margin-left: -45px;
+        padding-left: 105px;
+    }
+    #quintidade{
+        font-weight: 700;
+        padding-left: 6px;
+    }
+    #produto{
+        font-weight: 700;
+        padding-left: 0px;
+    }
+    #total{
+        font-weight: 700;
+        padding-left: 9px;
+    }
+    #image{
+        width: 60px;
+        height: 60px;
+    }
+    .col{
+        width: 100%;
+    }
+    #zero-pad{
+        padding: 2%;
+        margin-left: 10px;
+        
+    }
+    #footer-font{
+        font-size: 12px;
+    }
+    #heading{
+        padding-top: 15px;
+    }
+}
+header {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+}
+
+.hover-class:hover{
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    background-color: lightgray;
+    transition: background-color 1s, box-shadow 1s;
+}
