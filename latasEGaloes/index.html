@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latas e Galões</title>
+  </head>
+  <body>
+    <p id="resposta"></p>
+
+    <script tabindex="javascript">
+      const litrosPormM2 = 1.0 / 3.0; // 1 litro para 3 m2
+      const volLata = 18.0;
+      const volGalao = 3.6;
+      const precoLata = 80.0;
+      const precoGalao = 25.0;
+
+      const areaParaPintar = Number(prompt(`Entre com o tamanho da área: `));
+
+      const litros = areaParaPintar * litrosPormM2;
+
+      const latas = Math.ceil(litros / volLata);
+      const custoLatas = latas * precoLata;
+
+      const galoes = Math.ceil(litros / volGalao);
+      const custoGaloes = galoes * precoGalao;
+
+      // Mistura de latas e galões
+      const misturaLata = Math.trunc(litros / volLata);
+      const misturaGalao = Math.ceil(
+        (litros - misturaLata * volLata) / volGalao
+      );
+
+      let resposta = ``;
+      resposta +=`Apenas latas de 18 litros: ${latas}, preço: ${custoLatas}\n`;
+      resposta +=`Apenas galões de 3.6 litros: ${galoes}, preço: ${custoGaloes}\n`;
+      resposta +=`Mistura: ${misturaLata} ${
+          misturaLata <= 1 ? "lata" : "latas"
+        } e ${misturaGalao} ${misturaGalao <= 1 ? "galão" : "galões"} = ${
+          misturaLata * precoLata + misturaGalao * precoGalao
+        }\n`;
+      console.log(resposta);
+      document.getElementById("resposta").innerHTML = resposta.replace(/\n/g,"<br>");
+    </script>
+  </body>
+</html>
