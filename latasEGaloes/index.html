@@ -5,10 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Latas e Galões</title>
   </head>
-  <body>
+  <body style="margin: 50px; font-family: Verdana, Arial, Helvetica, sans-serif">
+    <h1 style="margin: 0; padding: 0">Latas e Galões</h1>
+
+    <h2 style="margin: 0; padding: 0">
+      Determina a quantidade mais econômica de Latas e Galões
+    </h2>
+    
+    <h3 style="margin: 0; padding: 0">para pintar uma área</h3>
+
+    <h4>
+      Rendimento litros por m² = 1,0 / 3,0 <br />
+      Volume da Lata = 18,0 litros <br />
+      Volume do Galão = 3,60 litros <br />
+      Preço da Lata = R$ 80,00 <br />
+      Preço do Galão = R$ 25,00 <br />
+    </h4>
 
     <p id="resposta"></p>
-    
+
     <script>
       const litrosPormM2 = 1.0 / 3.0; // 1 litro para 3 m2
       const volLata = 18.0;
@@ -33,16 +48,18 @@
       );
 
       let resposta = ``;
-      resposta +=`Apenas latas de 18 litros: ${latas}, preço: ${custoLatas}\n`;
-      resposta +=`Apenas galões de 3.6 litros: ${galoes}, preço: ${custoGaloes}\n`;
-      resposta +=`Mistura: ${misturaLata} ${
-          misturaLata <= 1 ? "lata" : "latas"
-        } e ${misturaGalao} ${misturaGalao <= 1 ? "galão" : "galões"} = ${
-          misturaLata * precoLata + misturaGalao * precoGalao
-        }\n`;
-      console.log(resposta);
-      document.getElementById("resposta").innerHTML = resposta.replace(/\n/g,"<br>");
-    </script>
+      resposta += `Apenas latas de 18 litros: ${latas} -> preço: R$ ${custoLatas.toFixed(2)}\n`;
+      resposta += `Apenas galões de 3,6 litros: ${galoes} -> preço: R$ ${custoGaloes.toFixed(2)}\n`;
+      resposta += `Mistura: ${misturaLata} ${
+        misturaLata <= 1 ? "lata" : "latas"
+      } e ${misturaGalao} ${misturaGalao <= 1 ? "galão" : "galões"} -> R$ ${
+        (misturaLata * precoLata + misturaGalao * precoGalao).toFixed(2)
+      }\n`;
 
+      console.log(resposta);
+      resposta = resposta.replace(/\n/g,"<br>");
+      resposta = resposta.replace(/\./g,",");
+      document.getElementById("resposta").innerHTML = resposta;
+    </script>
   </body>
 </html>
