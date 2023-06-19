@@ -22,6 +22,7 @@
       Preço do Galão = R$ 25,00 <br />
     </h4>
 
+    <p style="color:brown; font-weight: bold;" id="areaParaPintar"></p>
     <p id="resposta"></p>
 
     <script>
@@ -60,6 +61,7 @@
       resposta = resposta.replace(/\n/g,"<br>");
       resposta = resposta.replace(/\./g,",");
       document.getElementById("resposta").innerHTML = resposta;
+      document.getElementById("areaParaPintar").innerHTML = `Para pintar uma área de ${areaParaPintar}m² precisa:`
     </script>
   </body>
 </html>
