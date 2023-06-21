@@ -3,13 +3,13 @@ function alterarQtd(adicRemo, ProdN) {
   switch (adicRemo) {
     case "adicionar":
       qtd = parseInt(document.getElementById('qtd'+ProdN).innerHTML);
-      qtd++;
+      qtd+=1;
       document.getElementById('qtd'+ProdN).innerHTML = qtd;      
       break;
 
     case "remover":
       qtd = parseInt(document.getElementById('qtd'+ProdN).innerHTML);
-      qtd > 0 ? qtd-- : 0;
+      qtd > 0 ? qtd-=1 : 0;
       document.getElementById('qtd'+ProdN).innerHTML = qtd;
       break;
 
