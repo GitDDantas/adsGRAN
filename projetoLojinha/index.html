@@ -10,7 +10,8 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/mystylesheet.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/mystylesheet.css">
 </head>
 
 <body class="bg-primary">
@@ -46,7 +47,7 @@
             <div class="px-lg-5 ml-lg-1 font-weight-bold" id="quantidade">QUANTIDADE</div>
             <div class="px-lg-5 ml-lg-3 font-weight-bold" id="total">TOTAL</div>
           </div>
-          <div
+          <div id="produtoP01"
             class="d-flex flex-row justify-content-between align-items-center pt-lg-4 pt-2 pb-3 border-bottom hover-class mobile">
             <div class="d-flex flex-row align-items-center ">
               <div><img src="./img/canecaGran_900x900_9.jpg" width="150" height="150" alt="canecaGran" id="image01">
@@ -56,23 +57,24 @@
                   <h6>Caneca</h6>
                 </div>
                 <div>Código:<span class="pl-2">091091001</span></div>
-                <div>Cor:<span class="pl-3">Branca / Preta</span></div>
+                <div>Cor:<span class="pl-3">Branca</span></div>
                 <!--div>Size:<span class="pl-4"> M</span></div-->
               </div>
             </div>
-            <div class="pl-md-0 pl-1"><b>R$ 39,99</b></div>
+            <div class="pl-md-0 pl-1"><b>R$ <span id="prcP01">39,99</span> </b></div>
             <div class="pl-md-0 pl-2">
-              <span class="fa fa-minus-square text-secondary"></span><span class="px-md-3 px-1">1</span><span
-                class="fa fa-plus-square text-secondary"></span>
+              <span class="fa fa-minus-square text-secondary" id="removerP01" onclick="alterarQtd('remover','P01')"></span> 
+              <span class="px-md-3 px-1" id="qtdP01">1</span>
+              <span class="fa fa-plus-square text-secondary" id="adicionarP01" onclick="alterarQtd('adicionar','P01')"></span>
             </div>
-            <div class="pl-md-0 pl-1"><b>R$ 39,99</b></div>
-            <div class="close">&times;</div>
+            <div class="pl-md-0 pl-1"><b>R$ <span id="vTotalP01">39,99</span> </b></div>
+            <div></div>
           </div>
 
-          <div
+          <div  id="produtoP02"
             class="d-flex flex-row justify-content-between align-items-center pt-4 pb-3 border-bottom hover-class mobile">
             <div class="d-flex flex-row align-items-center">
-              <div><img src="./img/agendaGran_900x900_11.jpg" width="150" height="150" alt="agendaGran" id="image01">
+              <div><img src="./img/agendaGran_900x900_11.jpg" width="150" height="150" alt="agendaGran" id="image02">
               </div>
               <div class="d-flex flex-column pl-md-3 pl-1">
                 <div>
@@ -83,20 +85,21 @@
                 <!--div>Size:<span class="pl-4"> XL</span></div-->
               </div>
             </div>
-            <div class="pl-md-0 pl-1"><b>R$ 29,90</b></div>
+            <div class="pl-md-0 pl-1"><b>R$ <span id="prcP02">29,90</span></b></div>
             <div class="pl-md-0 pl-2">
-              <span class="fa fa-minus-square text-secondary"></span><span class="px-md-3 px-1">1</span><span
-                class="fa fa-plus-square text-secondary"></span>
+              <span class="fa fa-minus-square text-secondary" id="removerP02" onclick="alterarQtd('remover','P02')"></span>
+              <span class="px-md-3 px-1" id="qtdP02">1</span><span
+                class="fa fa-plus-square text-secondary" id="adicionarP02" onclick="alterarQtd('adicionar','P02')"></span>
             </div>
-            <div class="pl-md-0 pl-1"><b>R$ 29,90</b></div>
-            <div class="close">&times;</div>
+            <div class="pl-md-0 pl-1"><b>R$ <span id="vTotalP02">29,90</span></b></div>
+            <div></div>
           </div>
 
-          <div
+          <div id="produtoP03"
             class="d-flex flex-row justify-content-between align-items-center pt-lg-4 pt-2 pb-3 border-bottom hover-class mobile">
             <div class="d-flex flex-row align-items-center">
               <div><img src="./img/canecaImparavel_900x900_19.jpg" width="150" height="150" alt="canecaGran"
-                  id="image01"></div>
+                  id="image03"></div>
               <div class="d-flex flex-column pl-md-3 pl-1">
                 <div>
                   <h6>Caneca Mágica</h6>
@@ -106,13 +109,14 @@
                 <!--div>Size:<span class="pl-4"> M</span></div-->
               </div>
             </div>
-            <div class="pl-md-0 pl-1"><b>R$ 49,99</b></div>
+            <div class="pl-md-0 pl-1"><b>R$ <span id="prcP03">49,99</span> </b></div>
             <div class="pl-md-0 pl-2">
-              <span class="fa fa-minus-square text-secondary"></span><span class="px-md-3 px-1">1</span><span
-                class="fa fa-plus-square text-secondary"></span>
+              <span class="fa fa-minus-square text-secondary" id="removerP03" onclick="alterarQtd('remover','P03')"></span>
+              <span class="px-md-3 px-1" id="qtdP03">1</span><span
+                class="fa fa-plus-square text-secondary" id="adicionarP03" onclick="alterarQtd('adicionar','P03')"></span>
             </div>
-            <div class="pl-md-0 pl-1"><b>R$ 49,99</b></div>
-            <div class="close">&times;</div>
+            <div class="pl-md-0 pl-1"><b>R$ <span id="vTotalP03">49,99</span></b></div>
+            <div></div>
           </div>
         </div>
       </div>
@@ -127,7 +131,7 @@
               <button class="btn btn-sm bg-light border border-dark">VOLTAR</button>
             </div>
             <div class="px-md-0 px-1" id="footer-font">
-              <b class="pl-md-4">SUBTOTAL<span class="pl-md-4">R$ XXX</span></b>
+              <b class="pl-md-4">SUBTOTAL<span class="pl-md-4">R$ <span id="subTotal">119,88</span></span></b>
             </div>
             <div>
               <button class="btn btn-sm bg-dark text-white px-lg-5 px-3">CONTINUAR</button>
@@ -148,6 +152,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <script src="./js/funcoesCarrinho.js"></script>
 </body>
 
 </html>
